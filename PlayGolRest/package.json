@@ -1,0 +1,16 @@
+{
+  "name": "PlayGolRest",
+  "version": "0.0.1",
+  "description": "Api Rest para PlayGol",
+  "main": "server.js",
+  "author": {
+    "name": "dpineda",
+    "email": "davidpineda1003@gmail.com"
+  },
+  "dependencies": {
+    "mongoose": "^4.1.10",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "body-parser": "^1.14.1"
+  }
+}
