@@ -12,7 +12,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8bbfbabf-917a-444c-88ac-ed24f79e899e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>server.js</StartupFile>
+    <StartupFile>app.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,8 +30,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="models\user.js" />
-    <Compile Include="server.js" />
+    <Compile Include="controllers\userCtrl.js" />
+    <Compile Include="models\userModel.js" />
+    <Compile Include="app.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
