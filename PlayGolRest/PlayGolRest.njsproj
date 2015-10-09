@@ -30,7 +30,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="controllers\dataResidenceCtrl.js" />
     <Compile Include="controllers\userCtrl.js" />
+    <Compile Include="models\dataResidenceModel.js" />
     <Compile Include="models\userModel.js" />
     <Compile Include="app.js" />
     <Content Include="package.json" />

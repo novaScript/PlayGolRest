@@ -1,11 +1,10 @@
 ﻿/*
 Fecha: Octubre 07 de 2015
 Autor: David Alejandro Pineda Diaz
-Tipo: Modificacion
+Tipo: Creacion
 Descripcion: Modelo que representa al objeto usuario
 */
-exports = module.exports = function (app, mongoose) {
-    
+exports = module.exports = function (app, mongoose) {    
     var userSchema = new mongoose.Schema({
         nombre: { type: String },
         apellido: { type: String },
@@ -14,11 +13,13 @@ exports = module.exports = function (app, mongoose) {
             type: String,
             enum: ['Masculino', 'Femenino']
         },
-        pais: { type: String },
-        departamento: { type: String },
-        ciudad: { type: String },
+        datos_residencia: {
+            pais: { type: String },
+            departamento: { type: String },
+            ciudad: { type: String }            
+        },
         password: { type: String }
     });
     
-    mongoose.model('User', userSchema);
+    mongoose.model('user', userSchema);
 };
