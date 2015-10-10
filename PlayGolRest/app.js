@@ -5,7 +5,8 @@
     mongoose = require('mongoose');
 
 // Connection to DB
-mongoose.connect('mongodb://localhost/PlayGol', function (err, res) {
+var url = "mongodb://localhost/PlayGol";
+mongoose.connect(url, function (err, res) {
     if (err) throw err;
     console.log('Connected to Database');
 });
