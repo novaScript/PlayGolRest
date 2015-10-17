@@ -13,7 +13,7 @@ var DataResidence = mongoose.model("data_residence");
 exports.findAllStates = function (req, res) {
     DataResidence.aggregate([ 
         { $match: { pais: req.params.pais } },
-        { $group: { _id: "$departamento" } }
+        { $group: { _id: "$departamento", departamento: { $max: "$departamento" } } }
     ], function (err, states) {
         if (err) res.send(500, err.message);
         res.status(200).jsonp(states);
