@@ -47,6 +47,12 @@ users.route("/users/:id")
     .put(userCtrl.updateUser)
     .delete(userCtrl.deleteUser);
 
+users.route("/users/name_lastname/:option")
+    .get(userCtrl.findUserByNameLastName);
+
+users.route("/users/country_depart_city/:option")
+    .get(userCtrl.findUserByCountryDepartCity);
+
 app.use("/api", users);
 
 
@@ -70,6 +76,7 @@ dataTeam.route("/data_team")
 
 dataTeam.route("/data_team/:id")
     .put(dataTeamCtrl.updateTeam)
+    .delete(dataTeamCtrl.deleteTeam)
     .get(dataTeamCtrl.findAllTeamById);
 
 dataTeam.route("/data_team/nombre_team/:nombre_team")

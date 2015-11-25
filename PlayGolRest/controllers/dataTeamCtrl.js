@@ -9,6 +9,17 @@ Descripcion: Control que maneja el crud sobre el objeto Team
 var mongoose = require('mongoose');
 var Team = mongoose.model('data_team');
 
+
+//DELETE - Borra un equipo de la DB
+exports.deleteTeam = function (req, res) {
+    Team.findById(req.params.id, function (err, team) {
+        team.remove(function (err) {
+            if (err) return res.send(500, err.message);
+            res.status(200).send("OK");
+        })
+    });
+};
+
 //GET - Retorna todos los equipos de la base de datos
 exports.findAllTeam = function (req, res) {
     Team.find(function (err, team) {
